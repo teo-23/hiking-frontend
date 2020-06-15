@@ -17,7 +17,7 @@ import AddTrailForm from './components/AddTrailForm/AddTrailForm'
 
 import Footer from './components/Footer/Footer';
 import CardPhotoLeft from './components/CardPhotoLeft/CardPhotoLeft';
-import CardPhotoRight from './components/CardPhotoRight/CardPhotoRight';
+import Quote from './components/Quote/Quote';
 import HorizontalLine from './components/HorizontalLine/HorizontalLine';
 import HorizontalPhoto from './components/HorizontalPhoto/HorizontalPhoto';
 import FreeText from './components/FreeText/FreeText'
@@ -31,7 +31,7 @@ class App extends Component {
       showForm: false,
       response: "",
       lat: '',
-      lng: ''
+      lng: '',
      };
     this.service = new AuthService();
   }
@@ -70,8 +70,6 @@ class App extends Component {
     this.setState({showForm: true, lat: lat, lng: lng})
   }
 
-  
- 
   render() {
     this.fetchUser()
     if(this.state.loggedInUser){
@@ -85,8 +83,6 @@ class App extends Component {
             <Route exact path="/trails/:id" component={TrailDetails} />
             {/* <Route exact path="/PROFILE/:id" component={PROFILE} />       */}
           
-          
-          
           <GoogleMaps 
           trails={this.state.trails}
           setTrails={this.setTrails}
@@ -99,8 +95,7 @@ class App extends Component {
           lng={this.state.lng}
           hideForm={(response) => this.setState({showForm: false})}
           />}
-
-          
+   
           { this.state.trails.map((trail, index) => (
             <SearchResults 
             key = {index}
@@ -127,15 +122,11 @@ class App extends Component {
             <Route exact path="/trails" component={TrailsList}/>
             <Route exact path="/trails/:id" component={TrailDetails} />
 
-
-
             <div className="homepage">
               
               <HorizontalPhoto />
               <HorizontalLine />
-
-
-              <CardPhotoRight />
+              <Quote />
               <HorizontalLine />
               <CardPhotoLeft />
               <HorizontalLine />

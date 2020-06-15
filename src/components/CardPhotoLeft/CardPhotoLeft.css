@@ -5,6 +5,30 @@
     font-size: 1.5rem;
 }
 
-.photo-left {
-    height: 40vmin;
-  }
+@media (max-width: 767px) {
+    .row-with-columns {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
+    .button-top {
+        margin-bottom: 5px;
+    }
+
+    .photo-left {
+        height: 50vmin;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .photo-left {
+        height: 40vmin;
+    }   
+}
+
+@media (min-width: 992px) {
+    .photo-left {
+        height: 50vh;
+    }
+}
+

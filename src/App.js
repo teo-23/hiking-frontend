@@ -11,7 +11,6 @@ import AuthService from './service/auth-service';
 // import TrailService from './service/trail-service'
 import Login from './components/auth/Login';
 import GoogleMaps from './components/Googlemaps/Googlemaps';
-import SearchBar from './components/Searchbar/Searchbar'
 import SearchResults from './components/SearchResults/SearchResults'
 import AddTrailForm from './components/AddTrailForm/AddTrailForm'
 
@@ -88,17 +87,18 @@ class App extends Component {
           setTrails={this.setTrails}
           showForm={this.showForm}
           />
-          {/* <SearchBar /> */}
           
-          {this.state.showForm && <AddTrailForm 
+          { this.state.showForm && <AddTrailForm 
           lat={this.state.lat}
           lng={this.state.lng}
-          hideForm={(response) => this.setState({showForm: false})}
+          hideForm={() => this.setState({showForm: false})}
           />}
    
           { this.state.trails.map((trail, index) => (
             <SearchResults 
             key = {index}
+            number= {index}
+            stars={trail.stars}
             img = {trail.imgSmall}
             name = {trail.name}
             difficulty = {trail.difficulty}

@@ -37,8 +37,21 @@
 }
 
 #summary {
-    width: 200px;
+    max-width: 500px;
     text-align: start;
+}
+
+.card-info-wrapper {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.card-info-wrapper #star-rating {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 6px;
 }
 
 #difficulty {
@@ -46,11 +59,12 @@
     justify-content: center;
     align-items: center;
     width: 80px;
-    height: 20px;
+    height: 25px;
     background-color: rgb(189, 189, 211);
     color: white;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 0.8em;
+    padding-top: 8px;
 }
 
 .like button {
@@ -58,6 +72,11 @@
     color: rgba(189, 189, 211,1);
     border-radius: 0px 0px 8px 8px;
     border: 1px solid rgba(189, 189, 211,1);
+}
+
+.like button:hover {
+    background-color: rgb(188, 221, 236);
+    color: rgb(253, 253, 253);
 }
 
 img {

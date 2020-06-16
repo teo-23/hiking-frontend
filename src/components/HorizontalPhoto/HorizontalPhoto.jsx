@@ -7,9 +7,10 @@ export default function HorizontalPhoto() {
 
         <Jumbotron fluid>
             <Container className="jumbotron-fluid container-photo-central">
-                {/* <img className="Photo-central" src="/Chile_Paine.jpg" alt="central-main-img" fluid/> */}
+            <div className="hero-title">
                 <h1>Hi, king...</h1>
-                <p>...walk towards your dreams</p>
+                <h3>...walk towards your dreams</h3>
+            </div>   
             </Container>
         </Jumbotron>
         // {/* <div className="jumbotron-fluid">

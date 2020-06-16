@@ -21,7 +21,9 @@ class Signup extends Component {
         this.setState({
             username: "", 
             password: "",
+            
         });
+      
         this.props.getUser(response)
     })
     .catch( error => console.log(error) )
@@ -31,6 +33,7 @@ class Signup extends Component {
     const {name, value} = event.target;
     this.setState({[name]: value});
   }
+
    
   render(){
     return(
@@ -50,6 +53,7 @@ class Signup extends Component {
                 <input type="password" name="password" placeholder="choose your password" required value={this.state.password} onChange={ e => this.handleChange(e)} />
                 <br/><br/>
                 <input type="submit" value="Signup" className="button"/>
+
               </form>
               <br/>
               <p className="form-footer">Already have account? 

@@ -6,7 +6,7 @@ export default function CardPhotoLeft() {
     return (
         <>
         <div className="row row-with-columns align-items-center">
-            <div className="col-6 photo-column"><img className="photo-left" src="/alberta.jpg" alt="landscape" /></div>
+            <div className="col-6"><img className="photo-left" src="/alberta.jpg" alt="landscape" /></div>
             <div className="col-6 content-left-photo container">
             <p>Save, create, and share your favorite trails</p>
                 <div className="mb-2">

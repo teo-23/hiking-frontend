@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import AuthService from '../../service/auth-service';
 
 // import { LinkContainer } from 'react-router-bootstrap'
@@ -63,14 +63,15 @@ class Navigation extends Component {
         {console.log('myState', this.state.loggedInUser)}
         <div>
             <Navbar collapseOnSelect expand="lg" id="navbar" className="smart-scroll navbar-expand-lg fixed-top navbar-light bg-white border-0 mb-5">
-            <Navbar.Brand id="navbar-title" className="navbar-brand font-weight-bold" src="../../../public/LogoMakr_1gsA7S.png" href="/">Hiking <span
-                        className="navbar-text font-italic text-left"> Welcome, {this.state.loggedInUser.username}</span></Navbar.Brand>
+            <Navbar.Brand id="navbar-title" className="font-weight-bold" src="/logo-hiking.png" href="/"> <span
+                        className="navbar-text font-italic text-left navbar-element"> Welcome to Hiking, {this.state.loggedInUser.username}</span></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />            
             <Navbar.Collapse className="test" id="responsive-navbar-nav">
                 <Nav className="ml-auto nav-item">
-                <Nav.Link className="nav-link text-info" href="#profile">My profile (not working yet)</Nav.Link>
-                <Nav.Link className="nav-link text-info" href="/trails">Trails</Nav.Link>
-                <Nav.Link className="nav-link text-info" href="/"><button onClick={() => this.logoutUser()}>Logout</button></Nav.Link>
+                <Nav.Link className="nav-link navbar-element" href="#profile">My profile (not working yet)</Nav.Link>
+                <Nav.Link className="nav-link navbar-element" href="/trails">Trails</Nav.Link>
+                {/* <Nav.Link className="nav-link" href="/"><button onClick={() => this.logoutUser()}>Logout</button></Nav.Link> */}
+                <Button variant="success" onClick={() => this.logoutUser()} size="lg" href="/">Log out</Button>
                 </Nav>
             </Navbar.Collapse>
             </Navbar>

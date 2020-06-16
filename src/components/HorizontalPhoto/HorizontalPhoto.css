@@ -10,11 +10,16 @@
     margin-top: 30px;
   } */
 
-  .jumbotron {
-    background-image: url("/Chile_Paine.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.jumbotron {
+  background-image: url("/Chile_Paine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  width: 100%;
+  height: 60vmin;
+}
 
-    width: 100%;
-    height: 60vmin;
-  }
+.hero-title {
+  opacity: 0.9;
+  padding-top: 10px;
+}

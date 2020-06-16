@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import trailService from '../../service/trail-service'
+import StarRating from '../../components/StarRating/StarRating'
 import './searchResults.css'
 
 class SearchResults extends Component {
@@ -22,7 +23,7 @@ class SearchResults extends Component {
 
     render() {
         return (
-            <div class="wrapper">
+            <div className="wrapper">
             <div className="card-container">
                 <div className="card-image">
                     <img src={this.props.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://placekitten.com/g/200/200"}} alt="nature image"/>
@@ -33,13 +34,21 @@ class SearchResults extends Component {
                     <h5>summary:</h5>
                 </div> */}
                 <div className="card-info">
-                    <h7>{this.props.name}</h7>
-                    <div id="difficulty">
-                        <h7>{this.props.difficulty}</h7>
+                    <h6><strong>#{this.props.number}</strong> {this.props.name}</h6>
+
+                    <div className="card-info-wrapper">
+                        <div id="difficulty">
+                            <h6>{this.props.difficulty}</h6>
+                        </div>
+                        <div id="star-rating">
+                            <StarRating 
+                            stars={this.props.stars}
+                            />
+                        </div> 
                     </div>
                     
                     <div id="summary">
-                        <h7>{this.props.summary}</h7>
+                        <h6>{this.props.summary}</h6>
                     </div>
                     
                 </div>

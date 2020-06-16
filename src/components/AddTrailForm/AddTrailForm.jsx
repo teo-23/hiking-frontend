@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './AddTrailForm.css'
 import TrailService from '../../service/trail-service'
+import UserRating from '../../components/StarRating/UserRating'
 
 class AddTrailForm extends Component {
 
     state = { 
             name: '',
             summary: '',
+            rating: '',
             difficulty: 'green',
             selectedFile: null,
             service: new TrailService()
@@ -22,12 +24,17 @@ class AddTrailForm extends Component {
         data.append('name', this.state.name)
         data.append('summary', this.state.summary)
         data.append('difficulty', this.state.difficulty)
+        data.append('rating', this.state.rating) //Working on this right now
 
         this.state.service.createTrail(data)
         .then(response => {
             console.log(response)
             this.props.hideForm()
         })
+    }
+
+    hideForm = () => {
+        this.props.hideForm()
     }
 
     handleFileInput = (e) => {
@@ -39,14 +46,27 @@ class AddTrailForm extends Component {
         this.setState({[name]: value})
     }
 
+    setRating (rating) {
+        this.setState({rating})
+    }
+
     render() {
         return (
-
-        <div class="form-wrapper">
+            <>
+        <div className="form-title">
+            <h2>Submit your own trail and join the community!</h2>
+        </div>
+        <div className="form-wrapper">
             <form id="formy" onSubmit={(e) => this.handleSubmit(e)}>
 
                 <div id="one">
-                <h4>title</h4>
+                <div id="user-rating">
+                    <h4>title</h4>
+                    <UserRating 
+                       setRating={(rating) => this.setRating(rating)} 
+                       currentRating={this.state.rating}
+                    />
+                </div>
                 <input type="text" name="name" value={this.state.name} onChange={(e)=> this.handleInput(e)} />
 
                 <h4>description</h4>
@@ -69,11 +89,14 @@ class AddTrailForm extends Component {
                 <input id="photo" type="file" name="trailimage" onChange={this.handleFileInput}/>
                 </div>
 
-                <button type="submit">add Trail</button>
+                <button type="submit">Submit trail</button>
+                </div>
+                <div id="three">
+                    <button onClick={this.hideForm}>x</button>
                 </div>
             </form>
         </div>
-
+            </>
         )
 }
 }

@@ -6,8 +6,9 @@ export default function Marker(props) {
 
 
     return (
-        <div>
-            <img id="hiker-icon" src={hiker} alt=""/>
+        <div id="rondje">
+            <p>{props.number}</p>
+            {/* <img id="hiker-icon" src={hiker} alt=""/> */}
         </div>
     )
 }

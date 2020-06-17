@@ -12,7 +12,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import AuthService from '../../service/auth-service';
 
 // import { LinkContainer } from 'react-router-bootstrap'
-import { IndexLinkContainer } from 'react-router-bootstrap';
+// import { IndexLinkContainer } from 'react-router-bootstrap';
 
 
 var prevScrollpos = window.pageYOffset;

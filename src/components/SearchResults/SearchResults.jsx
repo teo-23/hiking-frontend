@@ -26,7 +26,7 @@ class SearchResults extends Component {
             <div className="wrapper">
             <div className="card-container">
                 <div className="card-image">
-                    <img src={this.props.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://placekitten.com/g/200/200"}} alt="nature image"/>
+                    <img src={this.props.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://placekitten.com/g/200/200"}} alt="nature"/>
                 </div>
                 {/* <div className="card-headers">
                     <h5>trail:</h5>

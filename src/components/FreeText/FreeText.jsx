@@ -1,6 +1,6 @@
 import React from 'react';
 import './FreeText.css';
-import Animate from 'animate.css'
+// import Animate from 'animate.css'
 
 export default function FreeText() {
     return (

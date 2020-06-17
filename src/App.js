@@ -8,7 +8,7 @@ import TrailDetails from './components/trails/TrailDetails';
 
 import Signup from './components/auth/Signup';
 import AuthService from './service/auth-service';
-// import TrailService from './service/trail-service'
+import Filters from './components/Filters/Filters'
 import Login from './components/auth/Login';
 import GoogleMaps from './components/Googlemaps/Googlemaps';
 import SearchResults from './components/SearchResults/SearchResults'
@@ -31,6 +31,8 @@ class App extends Component {
       response: "",
       lat: '',
       lng: '',
+      slider: 50,
+      results: 20,
      };
     this.service = new AuthService();
   }
@@ -69,6 +71,10 @@ class App extends Component {
     this.setState({showForm: true, lat: lat, lng: lng})
   }
 
+  setSlider = (slider, results) => {
+    this.setState({slider: slider, results: results})
+  }
+
   render() {
     this.fetchUser()
     if(this.state.loggedInUser){
@@ -82,10 +88,17 @@ class App extends Component {
             <Route exact path="/trails/:id" component={TrailDetails} />
             {/* <Route exact path="/PROFILE/:id" component={PROFILE} />       */}
           
+          <Filters 
+          slider={this.setSlider}
+          />
+
+
           <GoogleMaps 
           trails={this.state.trails}
           setTrails={this.setTrails}
           showForm={this.showForm}
+          slider={this.state.slider}
+          results={this.state.results}
           />
           
           { this.state.showForm && <AddTrailForm 

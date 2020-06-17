@@ -25,7 +25,7 @@ class Googlemaps extends Component {
 
   _onClick = ({lat, lng}) => {
     //console.log(lat, lng)
-    this.state.service.fetchTrails(lat, lng)
+    this.state.service.fetchTrails(lat, lng, this.props.slider, this.props.results)
     .then(response => {
       console.log(response)
       this.props.setTrails(response)

@@ -33,7 +33,7 @@ class Navigation extends Component {
     this.service = new AuthService();
   }
  
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.service.loggedin()
     .then(res => {
       console.log('test',res)
@@ -42,9 +42,6 @@ class Navigation extends Component {
     })
   }
   
-  componentWillUpdate() {
-    console.log('willUpdate', this.state.loggedInUser)
-  }
 
   logoutUser = () =>{
     this.service.logout()

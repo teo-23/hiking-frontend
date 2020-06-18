@@ -131,8 +131,7 @@ class App extends Component {
             <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
             <Route exact path="/trails" component={TrailsList}/>
             <Route exact path="/trails/:id" component={TrailDetails} />
-          </Switch>  
-
+           
           <div className="homepage">
               <HorizontalPhoto />
               <HorizontalLine />
@@ -142,6 +141,8 @@ class App extends Component {
               <HorizontalLine />
               <FreeText />
           </div>   
+          
+          </Switch> 
 
           <Footer />
         </div>

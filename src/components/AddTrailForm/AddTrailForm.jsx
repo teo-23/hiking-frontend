@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './AddTrailForm.css'
 import TrailService from '../../service/trail-service'
 import UserRating from '../../components/StarRating/UserRating'
+import { FaTextHeight } from 'react-icons/fa';
 
 class AddTrailForm extends Component {
 
@@ -24,7 +25,7 @@ class AddTrailForm extends Component {
         data.append('name', this.state.name)
         data.append('summary', this.state.summary)
         data.append('difficulty', this.state.difficulty)
-        data.append('rating', this.state.rating) //Working on this right now
+        data.append('rating', this.state.rating) 
 
         this.state.service.createTrail(data)
         .then(response => {
@@ -54,7 +55,7 @@ class AddTrailForm extends Component {
         return (
             <>
         <div className="form-title">
-            <h2>Submit your own trail and join the community!</h2>
+            {this.state.response ? <h2>{this.state.response}</h2> : <h2>Submit your own trail and join the community!</h2>}
         </div>
         <div className="form-wrapper">
             <form id="formy" onSubmit={(e) => this.handleSubmit(e)}>

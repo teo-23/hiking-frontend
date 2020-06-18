@@ -1,10 +1,15 @@
 import axios from 'axios';
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+}
+
 class AuthService {
   constructor() {
     let service = axios.create({
       baseURL: process.env.REACT_APP_BASEURL,
-      withCredentials: true
+      withCredentials: true,
+      headers: headers
     });
     this.service = service;
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AddTrailForm.css'
 import TrailService from '../../service/trail-service'
 import UserRating from '../../components/StarRating/UserRating'
-import { FaTextHeight } from 'react-icons/fa';
+// import { FaTextHeight } from 'react-icons/fa';
 
 class AddTrailForm extends Component {
 

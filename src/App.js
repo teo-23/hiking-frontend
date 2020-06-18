@@ -53,7 +53,7 @@ class App extends Component {
     }
   }
  
-  getTheUser= (userObj) => {
+  getTheUser = (userObj) => {
     window.location.reload(false);
     this.setState({
       loggedInUser: userObj

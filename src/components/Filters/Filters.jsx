@@ -33,15 +33,15 @@ class Filters extends Component {
                     
                     
 
-                    <div class="filter-container">
+                    <div className="filter-container">
                     <h6>Radius in miles</h6>
-                    <input name="slider" type="range" min="10" max="200" value={this.state.slider} class="slider" id="myRange" onChange={(e)=> this.handleInput(e)}/>
+                    <input name="slider" type="range" min="10" max="200" value={this.state.slider} className="slider" id="myRange" onChange={(e)=> this.handleInput(e)}/>
                     {this.state.slider}
                     </div>
 
-                    <div class="filter-container">
+                    <div className="filter-container">
                     <h6>Maximum results</h6>
-                    <input name="results" type="range" min="10" max="30" value={this.state.results} class="slider" id="myRange" onChange={(e)=> this.handleInput(e)}/>
+                    <input name="results" type="range" min="10" max="30" value={this.state.results} className="slider" id="myRange" onChange={(e)=> this.handleInput(e)}/>
                     {this.state.results}
                     </div>
 

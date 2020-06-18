@@ -4,7 +4,7 @@ import axios from 'axios';
 class TrailService {
   constructor() {
     let service = axios.create({
-      baseURL: "https://hi-king.herokuapp.com/api",
+      baseURL: process.env.REACT_APP_BASEURL,
       withCredentials: true
     });
     this.service = service;

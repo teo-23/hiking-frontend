@@ -14,7 +14,7 @@ const StarRating = (props) => {
 
     return (
         <div className="star">
-             {[...Array(check(props.stars))].map(index => <FaStar key={index} /> )}
+             {[...Array(check(props.stars))].map((star, index) => <FaStar key={index} /> )}
         </div>
     )
     

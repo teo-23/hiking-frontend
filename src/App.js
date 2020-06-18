@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import TrailsList from './components/trails/TrailsList';
 import Navbar from './components/navbar/Navbar';
@@ -54,7 +54,7 @@ class App extends Component {
   }
  
   getTheUser = (userObj) => {
-    window.location.reload(false);
+    // window.location.reload(false);
     this.setState({
       loggedInUser: userObj
     })
@@ -80,18 +80,14 @@ class App extends Component {
     if(this.state.loggedInUser){
       return (
         <div className="App">
+
+          <Route path='/'>
+
           <Navbar userInSession={this.state.loggedInUser} />
-          
-            {/* <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
-            <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/> */}
-            <Route exact path="/trails" component={TrailsList}/>
-            <Route exact path="/trails/:id" component={TrailDetails} />
-            {/* <Route exact path="/PROFILE/:id" component={PROFILE} />       */}
           
           <Filters 
           slider={this.setSlider}
           />
-
 
           <GoogleMaps 
           trails={this.state.trails}
@@ -121,6 +117,7 @@ class App extends Component {
           }
           
           <Footer />
+          </Route>
         </div>
       );
     } else {
@@ -130,13 +127,13 @@ class App extends Component {
           <Navbar userInSession={this.state.loggedInUser} />
           
           <Switch>
-            <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
+            <Route exact path='/login' render={() =>  <Login  getUser={this.getTheUser}/>}/>
             <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
             <Route exact path="/trails" component={TrailsList}/>
             <Route exact path="/trails/:id" component={TrailDetails} />
+          </Switch>  
 
-            <div className="homepage">
-              
+          <div className="homepage">
               <HorizontalPhoto />
               <HorizontalLine />
               <Quote />
@@ -144,8 +141,8 @@ class App extends Component {
               <CardPhotoLeft />
               <HorizontalLine />
               <FreeText />
-            </div>   
-          </Switch>  
+          </div>   
+
           <Footer />
         </div>
         </>

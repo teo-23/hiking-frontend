@@ -16,11 +16,6 @@ import AddTrailForm from './components/AddTrailForm/AddTrailForm';
 import Home from './components/Home/Home.jsx';
 
 import Footer from './components/Footer/Footer';
-import CardPhotoLeft from './components/CardPhotoLeft/CardPhotoLeft';
-import Quote from './components/Quote/Quote';
-import HorizontalLine from './components/HorizontalLine/HorizontalLine';
-import HorizontalPhoto from './components/HorizontalPhoto/HorizontalPhoto';
-import FreeText from './components/FreeText/FreeText';
 
 class App extends Component {
   constructor(props){

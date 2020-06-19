@@ -5,18 +5,55 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 767px) {
+.button-home {
+    width: 120px;
+}
+
+@media (max-width: 619px) {
     .row-with-columns {
         display: flex;
         align-items: center;
         flex-direction: column;
     } 
-    .button-top {
-        margin-bottom: 5px;
-    }
 
     .photo-left {
-        height: 40vh;
+        height: 25vh;
+    }
+
+    .button-home {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 710px) {
+    .row-with-columns {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
+
+    .photo-left {
+        height: 30vh;
+    }
+
+    .button-home {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 710px) and (max-width: 767px) {
+    .row-with-columns {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
+
+    .photo-left {
+        height: 35vh;
+    }
+
+    .button-home {
+        padding: 5px;
     }
 }
 

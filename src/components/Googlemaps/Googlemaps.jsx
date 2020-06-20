@@ -41,7 +41,6 @@ class Googlemaps extends Component {
  
   render() {
     return (
-      // Important! Always set the container height explicitly
       <div id="map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}

@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
-import TrailsList from './components/trails/TrailsList';
 import Navbar from './components/navbar/Navbar';
-import TrailDetails from './components/trails/TrailDetails';
 
 import Signup from './components/auth/Signup';
 import AuthService from './service/auth-service';
@@ -125,8 +123,6 @@ class App extends Component {
           <Switch>
             <Route exact path='/login' render={() =>  <Login  getUser={this.getTheUser}/>}/>
             <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
-            <Route exact path="/trails" component={TrailsList}/>
-            <Route exact path="/trails/:id" component={TrailDetails} />
           
           </Switch> 
           <Home />

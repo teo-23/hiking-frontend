@@ -12,6 +12,7 @@ class AddTrailForm extends Component {
             rating: '',
             difficulty: 'green',
             selectedFile: null,
+            message: '',
             service: new TrailService()
     }
 
@@ -30,7 +31,13 @@ class AddTrailForm extends Component {
         this.state.service.createTrail(data)
         .then(response => {
             console.log(response)
-            this.props.hideForm()
+            this.setState({message:response.message})
+            setTimeout(function() {
+                this.setState({message:''})
+                this.props.hideForm()
+            }
+            .bind(this)
+            ,3000)
         })
     }
 
@@ -55,7 +62,7 @@ class AddTrailForm extends Component {
         return (
             <>
         <div className="form-title">
-            {this.state.response ? <h2>{this.state.response}</h2> : <h2>Submit your own trail and join the community!</h2>}
+            {this.state.message ? <h2>{this.state.message}</h2> : <h2>Submit your own trail and join the community!</h2>}
         </div>
         <div className="form-wrapper">
             <form id="formy" onSubmit={(e) => this.handleSubmit(e)}>

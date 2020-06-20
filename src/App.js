@@ -127,12 +127,9 @@ class App extends Component {
             <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
             <Route exact path="/trails" component={TrailsList}/>
             <Route exact path="/trails/:id" component={TrailDetails} />
-           
-          <div className="homepage">
-              <Home />
-          </div>   
           
           </Switch> 
+          <Home />
 
           <Footer />
         </div>

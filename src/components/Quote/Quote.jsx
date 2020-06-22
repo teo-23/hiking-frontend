@@ -16,8 +16,6 @@ import './Quote.css';
 //     )
 // }
 
-// import React, { Component } from 'react'
-
 import React, { Component } from 'react'
 import axios from 'axios';
 
@@ -36,7 +34,7 @@ export default class Quote extends Component {
      }
     
      getQuote() {
-        let url = 'https://gist.githubusercontent.com/teo-23/8e6fe785160ba913c2873156277e8107/raw/82f65e0eb3c4efc17ebe41581713df4befeb6832/Quote-hiking'
+        let url = 'https://gist.githubusercontent.com/teo-23/8e6fe785160ba913c2873156277e8107/raw/316ff05094e41523767e701966a3556c336fcd9e/Quote-hiking'
     
         axios.get(url)
            .then(res => {

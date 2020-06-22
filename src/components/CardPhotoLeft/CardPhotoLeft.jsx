@@ -1,12 +1,13 @@
 import React from 'react';
 import './CardPhotoLeft.css';
 import { Button } from 'react-bootstrap';
+import HorizontalLine from '../HorizontalLine/HorizontalLine';
 
 export default function CardPhotoLeft() {
     return (
         <>
         <div className="row row-with-columns align-items-center">
-            <div className="col-6"><img className="photo-left" src="/alberta.jpg" alt="landscape" /></div>
+            <div className="col-6"><img className="photo-left" src="/theBeach.jpg" alt="landscape" /></div>
             <div className="col-6 content-left-photo">
             <p>Save, create, and share your favorite trails</p>
                 <div className="mb-2">
@@ -19,6 +20,10 @@ export default function CardPhotoLeft() {
                 </div>
             </div>
         </div>
+        <br></br>
+        <HorizontalLine />
+        <h1 className="title-sliding">Chosen by more than a million hikers </h1>
+
         </>       
     )
 }

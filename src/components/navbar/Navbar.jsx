@@ -89,7 +89,7 @@ class Navigation extends Component {
                 </Nav>
             </Navbar.Collapse>
             
-            <Navbar.Brand id="navbar-title" className="navbar-brand font-weight-bold" href="/"><img className="logo" src="/logo-hiking.png" alt="logo-hiking"/> 
+            <Navbar.Brand id="navbar-title" className="navbar-brand font-weight-bold" href="/"><img className="logo" src="/hiking-logo.png" alt="logo-hiking"/> 
             {/* <span className="navbar-text font-italic text-left navbar-element"> walk in freedom</span> */}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />            

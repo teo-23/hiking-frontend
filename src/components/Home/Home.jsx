@@ -15,9 +15,9 @@ export default class Home extends Component {
                 <HorizontalLine />
                 <Quote />
                 <HorizontalLine />
-                <CardPhotoLeft />
-                <HorizontalLine />
                 <FreeText />
+                <HorizontalLine />
+                <CardPhotoLeft />
                 <SlidingUsers />
                 </div>
             </div>

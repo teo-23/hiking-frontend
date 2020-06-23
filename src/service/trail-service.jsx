@@ -22,11 +22,25 @@ class TrailService {
 
   addToFavorite = (trail) => {
     return this.service.post('/addToFavorite', {trail})
-    .then(response => {
-      console.log(response)
-      return response.data
-    })
+    .then(response => response.data)
   }
+
+  fetchUserTrails = () => {
+    return this.service.get('/fetchUserTrails')
+    .then(response => response.data)
+  }
+
+  fetchFavoriteUserTrails = () => {
+    return this.service.get('/fetchFavoriteUserTrails')
+    .then(response => response.data)
+  }
+
+  deleteTrail = (id, type) => {
+    return this.service.post('/deleteTrail', {id,type})
+    .then(response => response.data)
+  }
+
+
   
 }
 

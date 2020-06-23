@@ -85,8 +85,22 @@
     color: rgb(253, 253, 253);
 }
 
-img {
+.card-image img {
     height: 200px;
+    max-width: 300px;
+    object-fit: cover;
     border-radius: 13px;
     margin-right: 10px;
+}
+
+.fa-heart {
+    color: lightgray;
+    font-size: 1.3em;
+}
+.fa-heart:hover {
+    color: rgb(210, 242, 0);
+}
+
+.fa-times {
+    cursor: pointer;
 }

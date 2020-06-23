@@ -6,11 +6,11 @@ import HorizontalLine from '../HorizontalLine/HorizontalLine';
 export default function CardPhotoLeft() {
     return (
         <>
-
-        <Card className="bg-dark text-white card">
-            <Card.Img src="/homepage.jpg" alt="italian Alps" />
+        <h3 className="card-title">Save, create, and share your favorite trails</h3>
+        <Card className="bg-dark card">
+            <Card.Img src="/homepage4.jpg" alt="italian Alps" />
                 <Card.ImgOverlay>
-                    <Card.Title className="align-elements">Save, create, and share your favorite trails</Card.Title>
+                    {/* <Card.Title className="align-elements">Save, create, and share your favorite trails</Card.Title> */}
                     {/* <Card.Text>
                     This is a wider card with supporting text below as a natural lead-in to
                     additional content. This content is a little bit longer.

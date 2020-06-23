@@ -5,7 +5,8 @@ class AuthService {
   constructor() {
     let service = axios.create({
       baseURL: process.env.REACT_APP_BASEURL,
-      withCredentials: true
+      withCredentials: true,
+      // validateStatus: () => true,
     });
     this.service = service;
   }

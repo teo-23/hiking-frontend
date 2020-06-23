@@ -7,7 +7,7 @@ import './Signup.css';
 class Signup extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { username: '', password: '', error: false, errorMessage: '' };
     this.service = new AuthService();
   }
 
@@ -26,12 +26,21 @@ class Signup extends Component {
       
         this.props.getUser(response)
     })
-    .catch( error => console.log(error) )
+  //   .catch( error => { error.json().then((body) => {
+  //     //Here is already the payload from API
+  //     this.setState({error: true, errorMessage: body}); return console.log(body)} );
+  // });
+      // this.setState({error: true, errorMessage: error.json }); return console.log(error, error.message)} )
+  
+      .catch(error => {
+        console.log(error.response);
+        this.setState({error: true, errorMessage: error.response.data.message }); return console.log(error, error.message)} )
   }
    
   handleChange = (event) => {  
     const {name, value} = event.target;
     this.setState({[name]: value});
+    this.setState({error: false})
   }
 
    
@@ -51,6 +60,7 @@ class Signup extends Component {
                 <br></br>
                 <label className="password">Password: </label>
                 <input type="password" name="password" placeholder="choose your password" required value={this.state.password} onChange={ e => this.handleChange(e)} />
+                {this.state.error && <div>{this.state.errorMessage}</div>}
                 <br/><br/>
                 <input type="submit" value="Signup" className="button"/>
 

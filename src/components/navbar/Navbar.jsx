@@ -103,6 +103,7 @@ class Navigation extends Component {
             
             </Navbar>
         </div>
+        <h1>Hiking, the site for your quality time</h1>
         </> 
       )
     }

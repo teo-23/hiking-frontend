@@ -6,7 +6,7 @@ import './Login.css';
 class Login extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { username: '', password: '', error: false, errorMessage: ''};
     this.service = new AuthService();
   }
 
@@ -19,7 +19,9 @@ class Login extends Component {
         this.setState({ username: "", password: "" });
         this.props.getUser(response)
     })
-    .catch( error => console.log(error) )
+    .catch(error => {
+      console.log(error.response);
+      this.setState({error: true, errorMessage: error.response.data.message }); return console.log(error, error.message)} )
   }
     
   handleChange = (event) => {  
@@ -42,6 +44,7 @@ class Login extends Component {
               <br></br>
               <label className="password">Password:</label>
               <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+              {this.state.error && <div>{this.state.errorMessage}</div>}
               <br></br>
               <input type="submit" value="Login" className="button" />
             </form>

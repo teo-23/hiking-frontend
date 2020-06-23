@@ -6,7 +6,7 @@ export default function HorizontalPhoto() {
     
     return (
         
-        <Carousel>
+        <Carousel className="carousel-positioning">
         <Carousel.Item>
             <img
             className="d-block w-100 container-photo-central"
@@ -20,25 +20,23 @@ export default function HorizontalPhoto() {
         <Carousel.Item>
             <img
             className="d-block w-100 container-photo-central"
-            src="/Chile_Paine_Small.jpg"
+            src="/homepage3.jpg"
             alt="Third slide"
             />
 
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
             <h3>Second photo</h3>
-            <p>something here</p>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
             <img
             className="d-block w-100 container-photo-central"
-            src="Chile_Paine_Small.jpg"
+            src="/homepage.jpg"
             alt="Third slide"
             />
 
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
             <h3>Third photo</h3>
-            <p>somethign here as well</p>
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>

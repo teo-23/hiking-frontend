@@ -106,7 +106,7 @@ class App extends Component {
           lng={this.state.lng}
           hideForm={() => this.setState({showForm: false})}
           />}
-          { this.state.trails.length != 0  && this.state.trails.map((trail, index) => (
+          { this.state.trails.length !== 0  && this.state.trails.map((trail, index) => (
             <SearchResults 
             key = {index}
             number= {index}

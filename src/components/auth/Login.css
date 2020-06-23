@@ -6,6 +6,11 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.error-messsage {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .section-login {
     display: flex;
     justify-content: center;

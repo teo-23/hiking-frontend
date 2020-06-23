@@ -19,7 +19,7 @@ var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    document.getElementById("navbar").style.top = "0px";
     } else {
     document.getElementById("navbar").style.top = "-110px";
     }
@@ -66,7 +66,7 @@ class Navigation extends Component {
             <Navbar.Collapse className="test" id="responsive-navbar-nav">
                 <Nav className="ml-auto nav-item">
                 <Nav.Link className="nav-link navbar-element" href="/profile">My profile</Nav.Link>
-                <Nav.Link className="nav-link navbar-element" href="/">explore</Nav.Link>
+                <Nav.Link className="nav-link navbar-element" href="/">Explore</Nav.Link>
                 {/* <Nav.Link className="nav-link" href="/"><button onClick={() => this.logoutUser()}>Logout</button></Nav.Link> */}
                 <Button variant="success" onClick={() => this.logoutUser()} size="lg" href="/">Log out</Button>
                 </Nav>
@@ -84,8 +84,9 @@ class Navigation extends Component {
             
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto nav-item">
-                  <Nav.Link as={Link} className="nav-link navbar-element" to="/explore">Explore</Nav.Link>
+                  <Nav.Link className="nav-link navbar-element" href="#explore">Explore</Nav.Link>
                   <Nav.Link as={Link} className="nav-link navbar-element" to="/profile">Profile</Nav.Link>
+                  {/* <NavDropdown.Item href="#explore">Action</NavDropdown.Item> */}
                 </Nav>
             </Navbar.Collapse>
             
@@ -103,7 +104,6 @@ class Navigation extends Component {
             
             </Navbar>
         </div>
-        <h1>Hiking, the site for your quality time</h1>
         </> 
       )
     }

@@ -9,6 +9,7 @@
   position: relative;
   padding-bottom: 5px;
   padding-top: 20px;
+  scroll-behavior: smooth;
 }
 
 .homepage {

@@ -11,7 +11,7 @@ export default function HorizontalPhoto() {
             <img
             className="d-block w-100 container-photo-central"
             src="/Chile_Paine_Small.jpg"
-            alt="First slide"
+            alt="Chilean Patagonia"
             />
             <Carousel.Caption className="caption">
             <h3>...walk towards your dreams...</h3>
@@ -21,7 +21,7 @@ export default function HorizontalPhoto() {
             <img
             className="d-block w-100 container-photo-central"
             src="/homepage3.jpg"
-            alt="Third slide"
+            alt="Walking in the mountains"
             />
 
             <Carousel.Caption className="caption">
@@ -32,7 +32,7 @@ export default function HorizontalPhoto() {
             <img
             className="d-block w-100 container-photo-central"
             src="/homepage.jpg"
-            alt="Third slide"
+            alt="Looking at the valley"
             />
 
             <Carousel.Caption className="caption">

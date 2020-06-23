@@ -44,7 +44,7 @@ class Login extends Component {
               <br></br>
               <label className="password">Password:</label>
               <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-              {this.state.error && <div>{this.state.errorMessage}</div>}
+              {this.state.error && <div className="error-messsage">{this.state.errorMessage}</div>}
               <br></br>
               <input type="submit" value="Login" className="button" />
             </form>

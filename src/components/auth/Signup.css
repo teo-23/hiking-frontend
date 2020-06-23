@@ -18,6 +18,11 @@ section {
     height: 93vh;
 }
 
+.error-messsage {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .signup-form {
     background-color: rgb(43, 77, 43);
     width: 20rem;

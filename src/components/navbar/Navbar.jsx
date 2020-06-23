@@ -65,8 +65,8 @@ class Navigation extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />            
             <Navbar.Collapse className="test" id="responsive-navbar-nav">
                 <Nav className="ml-auto nav-item">
-                <Nav.Link className="nav-link navbar-element" href="#profile">My profile (not working yet)</Nav.Link>
-                <Nav.Link className="nav-link navbar-element" href="/trails">Trails</Nav.Link>
+                <Nav.Link className="nav-link navbar-element" href="/profile">My profile</Nav.Link>
+                <Nav.Link className="nav-link navbar-element" href="/">explore</Nav.Link>
                 {/* <Nav.Link className="nav-link" href="/"><button onClick={() => this.logoutUser()}>Logout</button></Nav.Link> */}
                 <Button variant="success" onClick={() => this.logoutUser()} size="lg" href="/">Log out</Button>
                 </Nav>

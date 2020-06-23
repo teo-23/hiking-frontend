@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
 
+import { FaArrowUp } from 'react-icons/fa'
+
 import Signup from './components/auth/Signup';
 import AuthService from './service/auth-service';
 import Filters from './components/Filters/Filters'
@@ -11,7 +13,8 @@ import Login from './components/auth/Login';
 import GoogleMaps from './components/Googlemaps/Googlemaps';
 import SearchResults from './components/SearchResults/SearchResults';
 import AddTrailForm from './components/AddTrailForm/AddTrailForm';
-import Home from './components/Home/Home.jsx';
+import Home from './components/Home/Home';
+import MyProfile from './components/MyProfile/MyProfile'
 
 import Footer from './components/Footer/Footer';
 
@@ -74,11 +77,16 @@ class App extends Component {
     if(this.state.loggedInUser){
       return (
         <div className="App">
+          <Switch>
+          <Route exact path='/profile'>
+          <Navbar userInSession={this.state.loggedInUser} />
+          <MyProfile />
+          <Footer />
+          </Route>
 
           <Route path='/'>
-
           <Navbar userInSession={this.state.loggedInUser} />
-          
+
           <Filters 
           slider={this.setSlider}
           />
@@ -90,14 +98,15 @@ class App extends Component {
           slider={this.state.slider}
           results={this.state.results}
           />
-          
+
+          {this.state.trails.length === 0 ? <h2>Click on the map to search for trails <FaArrowUp /></h2> : '' }
+
           { this.state.showForm && <AddTrailForm 
           lat={this.state.lat}
           lng={this.state.lng}
           hideForm={() => this.setState({showForm: false})}
           />}
-   
-          { this.state.trails.map((trail, index) => (
+          { this.state.trails.length != 0  && this.state.trails.map((trail, index) => (
             <SearchResults 
             key = {index}
             number= {index}
@@ -109,9 +118,12 @@ class App extends Component {
             />
           ))
           }
-          
           <Footer />
           </Route>
+          </Switch>
+
+          
+
         </div>
       );
     } else {

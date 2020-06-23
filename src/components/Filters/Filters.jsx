@@ -5,7 +5,7 @@ class Filters extends Component {
     
     state = {
         difficulty: 'difficulty',
-        slider: 50,
+        slider: 120,
         results: 20,
     }
 
@@ -20,18 +20,6 @@ class Filters extends Component {
             <>
             
             <div className="filter-wrapper">
-              
-
-                    {/* <div class="slidecontainer">
-                    <h6>difficulty</h6>    
-                    <select name="difficulty" value={this.state.difficulty} onChange={(e)=> this.handleInput(e)}>
-                        <option value="green">green</option>
-                        <option value="blue">blue</option>
-                        <option value="black">black</option>
-                    </select>
-                    </div> */}
-                    
-                    
 
                     <div className="filter-container">
                     <h6>Radius in miles</h6>

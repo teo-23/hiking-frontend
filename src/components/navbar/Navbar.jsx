@@ -82,13 +82,12 @@ class Navigation extends Component {
         <div>
             <Navbar collapseOnSelect expand="lg" id="navbar" className="smart-scroll navbar-expand-lg fixed-top navbar-light bg-white border-0 mb-5">
             
-            <Navbar.Collapse id="responsive-navbar-nav">
+            {/* <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto nav-item">
                   <Nav.Link className="nav-link navbar-element" href="#explore">Explore</Nav.Link>
                   <Nav.Link as={Link} className="nav-link navbar-element" to="/profile">Profile</Nav.Link>
-                  {/* <NavDropdown.Item href="#explore">Action</NavDropdown.Item> */}
                 </Nav>
-            </Navbar.Collapse>
+            </Navbar.Collapse> */}
             
             <Navbar.Brand id="navbar-title" className="navbar-brand font-weight-bold" href="/"><img className="logo" src="/hiking-logo.png" alt="logo-hiking"/> 
             {/* <span className="navbar-text font-italic text-left navbar-element"> walk in freedom</span> */}

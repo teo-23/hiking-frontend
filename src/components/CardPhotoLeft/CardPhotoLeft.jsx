@@ -1,8 +1,8 @@
 import React from 'react';
 import './CardPhotoLeft.css';
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import HorizontalLine from '../HorizontalLine/HorizontalLine';
-import SlidingUsers from '../SlidingUsers/SlidingUsers'
+// import SlidingUsers from '../SlidingUsers/SlidingUsers'
 
 export default function CardPhotoLeft() {
     return (
@@ -22,16 +22,16 @@ export default function CardPhotoLeft() {
             </div>
         </div>
         <br></br>
-        <Card className="bg-dark card">
+        {/* <Card className="bg-dark card">
             <Card.Img src="/homepage4.jpg" alt="italian Alps" />
-                <Card.ImgOverlay>
+                <Card.ImgOverlay> */}
                     {/* <Card.Title className="align-elements">Save, create, and share your favorite trails</Card.Title>
                     <Card.Text>
                     This is a wider card with supporting text below as a natural lead-in to
                     additional content. This content is a little bit longer.
                     </Card.Text>
                     <Card.Text>Last updated 3 mins ago</Card.Text> */}
-                    <h1 className="title-sliding">Chosen by more than a million hikers </h1>
+                    {/* <h1 className="title-sliding">Chosen by more than a million hikers </h1>
                     <SlidingUsers/>
                     <Button variant="success" size="lg" href="/signup" className="button button-home">
                     Signup
@@ -40,7 +40,7 @@ export default function CardPhotoLeft() {
                     Login
                     </Button>
                 </Card.ImgOverlay>
-        </Card>
+        </Card> */}
 
         <br></br>
         <HorizontalLine />

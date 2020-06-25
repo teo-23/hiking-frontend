@@ -4,6 +4,7 @@ import './Footer.css';
 
 export default function Footer() {
     return (
+        <>
         <div className="footer d-flex flex-column">
             <footer className="page-footer font-small text-success">
 
@@ -14,5 +15,6 @@ export default function Footer() {
 
             </footer>
         </div>
+        </>
     )
 }

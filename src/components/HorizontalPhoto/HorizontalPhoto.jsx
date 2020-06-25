@@ -25,7 +25,7 @@ export default function HorizontalPhoto() {
             />
 
             <Carousel.Caption className="caption">
-            <h3>Second photo</h3>
+            {/* <h3>Second photo</h3> */}
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,7 +36,7 @@ export default function HorizontalPhoto() {
             />
 
             <Carousel.Caption className="caption">
-            <h3>Third photo</h3>
+            {/* <h3>Third photo</h3> */}
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>

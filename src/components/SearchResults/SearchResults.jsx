@@ -15,7 +15,8 @@ class SearchResults extends Component {
         latitude: this.props.latitude,
         longitude: this.props.longitude,
         summary: this.props.summary,
-        service: new trailService()
+        service: new trailService(),
+        message: '',
     }
 
     addToFavorite = () => {
@@ -31,6 +32,12 @@ class SearchResults extends Component {
         this.state.service.addToFavorite(trail)
         .then(response => {
             console.log(response)
+            this.setState({message: response.message})
+            setTimeout(function() {
+                this.setState({message:''})
+            }
+            .bind(this)
+            ,2000)
         })
     }
 
@@ -44,6 +51,7 @@ class SearchResults extends Component {
 
     render() {
         return (
+            <>
             <div className="wrapper">
                 <div className="card-container">
 
@@ -52,6 +60,10 @@ class SearchResults extends Component {
                     </div>
 
                     <div className="card-info">
+                        <div className="reponse-message">
+                            {this.state.message ? <strong><p>{this.state.message}</p></strong>  : '' }
+                        </div>
+
                         {!this.props.check ? 
                         <h6><strong>#{this.props.number}</strong> {this.props.name}</h6> :
                         <h6>{this.props.name}</h6>
@@ -72,6 +84,7 @@ class SearchResults extends Component {
                             <h6>{this.props.summary}</h6>
                         </div>
                         
+                        
                     </div>
                     { this.props.check ? 
                         <div className="like">
@@ -81,17 +94,23 @@ class SearchResults extends Component {
                             onClick={() => this.props.deleteTrail(this.props.id, this.props.type)}
                             />
                         </div> :
+                        
+                        
                         <div className="like">
                             <FaHeart 
                             className='fa-heart'
                             onClick={this.addToFavorite}
                             />
-                        </div>
+                        </div>  
                     }
                     
-
                 </div>
             </div>
+                    
+            
+                
+            </>
+
         );
     }
 }

@@ -104,3 +104,27 @@
 .fa-times {
     cursor: pointer;
 }
+
+.reponse-message {
+    margin-top: -7px;
+    color: rgb(206, 206, 206);
+}
+/* Modal starts here */
+
+/* .bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    color: black;
+} */

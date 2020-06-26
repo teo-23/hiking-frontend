@@ -10,7 +10,7 @@ export default function CardPhotoLeft() {
         <div className="row row-with-columns align-items-center" id="explore">
             <div className="col-6"><img className="photo-left" src="/theBeach.jpg" alt="landscape" /></div>
             <div className="col-6 content-left-photo">
-            <p>The website for your quality time</p>
+            <p>The website for your quality time.</p>
                 <div className="mb-2">
                     <Button variant="success" size="lg" href="/signup" className="button button-home">
                     Signup

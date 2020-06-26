@@ -8,11 +8,11 @@ export default function FreeText() {
         <>
         <div className="free-text">
 
-            <h2>Find the best trails to free your mind and get some natural relax.</h2>
+            <h4>Find the best trails to free your mind and get some natural relax.</h4>
 
-            <h2>Your happiness is just a few clicks away. Save and create your favorite trails in your profile.</h2>
+            <h4>Your happiness is just a few clicks away. Save and create your favorite trails in your profile.</h4>
 
-            <h2>Stop reading now and start walking towards wonderful destinations!</h2>            
+            <h3>Stop reading now and start walking towards wonderful destinations!</h3>            
 
         </div>
         </>

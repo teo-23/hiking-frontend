@@ -35,7 +35,7 @@ class Login extends Component {
         <section className="section-login">
 
           <div className="login container login-form">
-            <h3 className="header">welcome back</h3>
+            <h3 className="header">start hiking</h3>
 
             <form onSubmit={this.handleFormSubmit}>
               <label className="username">Username:</label>

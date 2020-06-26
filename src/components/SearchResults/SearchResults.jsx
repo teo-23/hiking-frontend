@@ -56,7 +56,7 @@ class SearchResults extends Component {
                 <div className="card-container">
 
                     <div className="card-image">
-                        <img src={this.props.img} onError={(e)=>{e.target.onerror = null; e.target.src="http://placekitten.com/g/300/200"}} alt="nature"/>
+                        <img src={this.props.img} onError={(e)=>{e.target.onerror = null; e.target.src="https://images.pexels.com/photos/733162/pexels-photo-733162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"}} alt="nature"/>
                     </div>
 
                     <div className="card-info">
